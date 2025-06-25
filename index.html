@@ -2,224 +2,132 @@
 <html lang="nl">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>De Schapentuin | Reserveer je bezoek</title>
-  <meta name="description" content="Bezoek De Schapentuin! Reserveer eenvoudig en ontdek de dieren.">
-  <meta name="language" content="nl" />
-
-  <!-- Open Graph voor sociale media -->
-  <meta property="og:title" content="Kinderboerderij De Schapentuin" />
-  <meta property="og:description" content="Reserveer een tijdslot voor een gezellig bezoek aan onze schapentuin." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://deschapentuin.nl/" />
-  <meta property="og:image" content="https://deschapentuin.nl/images/hero.jpg" />
-
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      background-color: #fafafa;
-      color: #333;
-    }
-
-    header {
-      background: url('https://picsum.photos/1200/500?random=1') no-repeat center center/cover;
-      height: 300px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
-    }
-
-    header h1 {
-      font-size: 2em;
-      padding: 1rem;
-      text-align: center;
-    }
-
-    main {
-      padding: 2rem 1rem;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    .section {
-      margin-bottom: 2rem;
-    }
-
-    .photos {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1rem;
-    }
-
-    .photo-card {
-      background: white;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      overflow: hidden;
-      text-align: center;
-    }
-
-    .photo-card img {
-      width: 100%;
-      height: auto;
-    }
-
-    .photo-card p {
-      padding: 1rem;
-      font-size: 0.95rem;
-    }
-
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 1.5em;
-      }
-
-      main {
-        padding: 1rem;
-      }
-    }
-
-    /* --- NAVBAR STYLING --- */
-    .navbar {
-      background-color: #4CAF50;
-      color: white;
-      padding: 0.5rem 1rem;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    .navbar-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    .navbar-brand {
-      font-size: 1.5rem;
-      font-weight: bold;
-    }
-
-    .navbar-toggle {
-      display: none;
-      font-size: 1.5rem;
-      background: none;
-      border: none;
-      color: white;
-      cursor: pointer;
-    }
-
-    .navbar-links {
-      list-style: none;
-      display: flex;
-      gap: 1rem;
-      margin: 0;
-      padding: 0;
-    }
-
-    .navbar-links li a {
-      color: white;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    .navbar-links li a:hover {
-      text-decoration: underline;
-    }
-
-    /* --- RESPONSIVE NAVBAR --- */
-    @media (max-width: 768px) {
-      .navbar-toggle {
-        display: block;
-      }
-
-      .navbar-links {
-        display: none;
-        flex-direction: column;
-        background-color: #4CAF50;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-      }
-
-      .navbar-links.show {
-        display: flex;
-      }
-
-      .navbar-links li {
-        padding: 0.5rem 1rem;
-      }
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>De Schapentuin</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
-<body>
-  <nav class="navbar">
-    <div class="navbar-container">
-      <div class="navbar-brand">De Schapentuin</div>
-      <button class="navbar-toggle" onclick="toggleMenu()">☰</button>
-      <ul class="navbar-links" id="navbarLinks">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Over ons</a></li>
-        <li><a href="#">Bezoekinformatie</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
+<body style="background-color: #f3fbe9;">
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg shadow-sm" style="background-color: #7BB369;">
+    <div class="container-lg">
+      <a class="navbar-brand fw-bold text-white" href="#">De Schapentuin</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#over">Over ons</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#contact">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#reserveren">Reserveren</a>
+          </li>
+        </ul>
+      </div>
     </div>
   </nav>
 
-  <header>
-    <h1>Welkom bij De Schapentuin</h1>
-  </header>
 
-  <main>
-    <section class="section">
-      <h2>Over ons</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Op De Schapentuin maken kinderen op speelse wijze
-        kennis met dieren.</p>
-    </section>
 
-    <section class="section">
-      <h2>Reserveer je bezoek</h2>
-      <p>Gebruik onderstaand formulier om eenvoudig een tijdslot te reserveren. Maximaal x personen per reservering.</p>
-      <!-- Hier zou de iframe van Simplybook kunnen komen -->
-      <div style="margin-top: 1rem; text-align:center;">
-        <iframe src="www.google.com" width="100%" height="400" style="border:0;"
-          title="Reserveringsformulier"></iframe>
-      </div>
-    </section>
+  <!-- Hero Section -->
+  <div class="hero" id="home">
+    <div class="hero-text">
+      <h1>Welkom bij De Schapentuin!</h1>
+      <p>De plek waar kinderen dieren ontmoeten, spelen in het gras en ouders ontspannen in de zon.</p>
+      <a href="#reserveren" class="btn-reserveer">Reserveren</a>
+    </div>
+  </div>
 
-    <section class="section">
-      <h2>Maak alvast kennis!</h2>
-      <div class="photos">
-        <div class="photo-card">
-          <img src="https://picsum.photos/400/300?random=1" alt="afbeelding 1">
-          <p>Tekst.</p>
+  <!-- Info Sections -->
+  <div class="container" id="over">
+    <div class="section">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <img src="images/image_1.jpg" alt="Schapen">
         </div>
-        <div class="photo-card">
-          <img src="https://picsum.photos/400/300?random=2" alt="afbeelding 2">
-          <p>Tekst.</p>
-        </div>
-        <div class="photo-card">
-          <img src="https://picsum.photos/400/300?random=3" alt="afbeelding 3">
-          <p>Tekst.</p>
+        <div class="col-md-6">
+          <h2>Schattige Schapen</h2>
+          <p>Lorem ipsum dolor sit amet, schapen zijn zacht, lief en dol op aandacht!</p>
         </div>
       </div>
-    </section>
-  </main>
+    </div>
+
+    <div class="section">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <img src="images/image_2.jpg" alt="Geiten">
+        </div>
+        <div class="col-md-6">
+          <h2>Nog een tekst?</h2>
+          <p>tekst hier!</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <img src="images/image_3.jpg" alt="Kinderen op de boerderij">
+        </div>
+        <div class="col-md-6">
+          <h2>Voor Jong en Oud</h2>
+          <p>Een dagje uit voor het hele gezin – leer, speel en geniet in de natuur.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end of container -->
+
+  <!-- Contact Section -->
+  <section id="contact" style="background-color: #eaf4da; padding: 4rem 1rem;">
+    <div class="container">
+      <h2 class="mb-4" style="color: #4d774e; font-weight: bold;">Contact</h2>
+      <p style="font-size: 1.1rem;">Heb je vragen? Neem gerust contact met ons op via onderstaand e-mailadres of kom
+        gezellig langs!</p>
+      <p style="font-size: 1.1rem;">
+        📧 Mail: <a href="mailto:info@deschapentuin.nl">info@deschapentuin.nl</a><br>
+        📍 Adres: Molendijksweg 7, 1234XX Obdam<br>
+        ☎️ Telefoon: 06 - 123 456 78
+      </p>
+
+      <!-- Google Maps -->
+      <div class="mt-4">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d587.691628618792!2d4.882104603560111!3d52.66632235954669!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47cf54ed54ae4f27%3A0xa1975c83ea045ddd!2sMolendijksweg%207%2C%201713%20RB%20Obdam!5e0!3m2!1snl!2snl!4v1750860699850!5m2!1snl!2snl"
+          width="100%" height="300" style="border:0; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);"
+          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer>
+    <div id="copyrightFooter"></div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script>
-    function toggleMenu() {
-      const links = document.getElementById("navbarLinks");
-      links.classList.toggle("show");
-    }
+    const date = new Date();
+    const year = date.getFullYear();
+    document.getElementById('copyrightFooter').innerHTML =
+      `&copy; ${year} De Schapentuin</a>`;
   </script>
 </body>
 
