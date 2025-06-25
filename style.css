@@ -48,11 +48,14 @@
 
 /* Responsief voor kleinere schermen */
 @media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    justify-content: center; /* midden in de hoogte */
+    height: 70vh;
+  }
   .hero-text {
-    max-width: 90%;       /* iets smaller dan schermbreedte */
-    margin-left: auto;    /* centreren horizontaal */
-    margin-right: auto;
-    padding: 1.5rem;
+    max-width: 90%;
+    margin: 0 auto;
   }
 }
 
