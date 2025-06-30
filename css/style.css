@@ -24,25 +24,66 @@
 }
 
 /* HERO */
-
 .hero {
   position: relative;
   background: url('../images/SchapenTuin_Hero.jpg') center center / cover no-repeat;
   background-size: cover;
   height: 80vh;
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  padding-left: 5%;
+  justify-content: center;   /* Horizontaal in het midden */
+  align-items: flex-end;     /* Onderaan */
   color: white;
+}
+
+.hero-overlay {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3); /* Transparante zwarte balk */
+  display: flex;
+  justify-content: center;
 }
 
 .hero-text {
   max-width: 500px;
-  background-color: rgba(0, 0, 0, 0.6);
   padding: 2rem;
-  border-radius: 15px;
-  margin-left: 5%;
+  color: white;
+  text-align: center;
+  margin: 0;
+  font-family: 'Sacramento', cursive;
+}
+
+.hero-text h1 {
+  font-size: 4rem; /* Pas aan naar wens, bijv. 3rem voor nog groter */
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.hero-text h3 {
+  font-size: 2rem; /* Pas aan naar wens, bijv. 3rem voor nog groter */
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+/* Responsief voor kleinere schermen */
+@media (max-width: 768px) {
+  .hero {
+    height: 50vh;
+  }
+
+  .hero-text {
+    max-width: 90%;
+    margin: 0;
+    /* margin-left weghalen! */
+    padding: 1.5rem;
+    border-radius: 15px;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-text h3 {
+    font-size: 1.2rem;
+  }
 }
 
 .hero a.btn-reserveer {
@@ -72,13 +113,13 @@
   background-color: #ffffff;
   margin-bottom: 2rem;
   border-radius: 30px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  /* box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05); */
   transition: transform 0.3s ease;
 }
 
-.section:hover {
+/* .section:hover {
   transform: translateY(-5px);
-}
+} */
 
 .section h2 {
   font-size: 2rem;
