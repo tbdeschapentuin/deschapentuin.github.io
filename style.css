@@ -26,7 +26,7 @@
 /* HERO */
 .hero {
   position: relative;
-  background: url('../images/SchapenTuin_Hero.jpg') center center / cover no-repeat;
+  background: url('../images/SchapenTuin_Hero_tijden.jpg') center center / cover no-repeat;
   background-size: cover;
   height: 80vh;
   display: flex;
@@ -146,4 +146,5 @@ footer {
   color: white;
   text-align: center;
   padding: 1rem;
+
 }
